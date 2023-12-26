@@ -16,9 +16,7 @@ public class WebSecurityConfig {
     //We can build this service to fetch our DB users for authorization
     @Bean
     public UserDetailsService userDetailsService(){
-
         InMemoryUserDetailsManager userDetails = new InMemoryUserDetailsManager();
-
         //Creating My User
         UserDetails userOne = User.withUsername("Caleb").password("12345").authorities("read").build();
 
