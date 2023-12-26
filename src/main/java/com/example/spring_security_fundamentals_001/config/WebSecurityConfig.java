@@ -18,6 +18,7 @@ public class WebSecurityConfig {
     public UserDetailsService userDetailsService(){
         InMemoryUserDetailsManager userDetails = new InMemoryUserDetailsManager();
         //Creating My User
+        //Authenitcation provioder will check from in memory to validate the User
         UserDetails userOne = User.withUsername("Caleb").password("12345").authorities("read").build();
 
         //Storing myUser
